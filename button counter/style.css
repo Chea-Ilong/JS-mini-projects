@@ -1,0 +1,56 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#countLabel {
+    font-size: 8rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+#btnContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons {
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttons:hover {
+    background: linear-gradient(to right, #0056b3, #0096FF);
+    transform: scale(1.1);
+}
+
+.buttons:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 600px) {
+    #countLabel {
+        font-size: 6rem;
+    }
+    .buttons {
+        padding: 12px 20px;
+        font-size: 1.2rem;
+    }
+}
