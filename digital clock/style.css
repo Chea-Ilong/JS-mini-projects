@@ -1,0 +1,55 @@
+/* Body Styling */
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1000px; /* Adds depth by applying perspective */
+}
+
+/* Clock Container (Centering the clock) */
+#clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Clock Styling with 3D Effect */
+#clock {
+    font-family: 'Courier New', monospace; /* Digital font */
+    font-size: 6rem;
+    font-weight: bold;
+    color: #1a1a1a; /* Dark color for text */
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border: 10px solid #1a1a1a;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    letter-spacing: 2px;
+    transform-style: preserve-3d; /* Enable 3D transformations */
+    transform: rotateX(0deg) rotateY(0deg); /* Initial state (no rotation) */
+}
+
+/* Adding 3D rotation on hover */
+#clock:hover {
+    transform: rotateY(20deg) rotateX(15deg); /* Rotate the clock on hover */
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+/* Glow effect */
+#clock.glow {
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #clock {
+        font-size: 10vw; /* Resize clock font based on the viewport width */
+    }
+}
